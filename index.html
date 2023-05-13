@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/scafer31000/bubble-circle-3/1024/Calculator-icon.png" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            height: 100vh;
+             width: 100%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             background-color: rgb(31, 16, 44);
+        }
+         #clasi{
+            max-width: 250px;
+            width: 80%;
+            padding: 30px;
+            border-radius: 7px;
+            background-color:rgb(55, 78, 71);
+            border: 1px solid rgb(133, 77, 77);
+             box-shadow: 2px -1px 8px rgb(170, 137, 55),  5px 4px 6px gray, 4px 4px 5px rgb(109, 73, 73);
+         }
+           
+         #display{
+            width: 80%;
+            height: 30px;
+         }
+         input:active{
+            background-color: rgb(155, 84, 134);
+         }
+         input{
+            width: 50px;
+            height: 27px;
+            font-size: medium;
+         }
+         form input.equal{
+            border-color: azure;
+            border-radius: 3px;
+            width: 100px;
+         }
+        
+    </style>
+</head>
+<body>
+    <section>
+      <form id="clasi">
+
+        <input id="display">
+        <br>
+        <br>
+        <input  type="button" value="AC" onclick="clasi.display.value=''">
+        <input  type="button" value="del" onclick="clasi.display.value= display.value.toString().slice(0,-1) ">
+        <input  type="button" value="%" onclick="clasi.display.value+='%'">
+        <input  type="button" value="+" onclick="clasi.display.value+='+'">
+        <br>
+        <br>
+
+        <input  type="button" value="1" onclick="clasi.display.value+='1'">
+        <input  type="button" value="2" onclick="clasi.display.value+='2'">
+        <input  type="button" value="3" onclick="clasi.display.value+='3'">
+        <input  type="button" value="-" onclick="clasi.display.value+='-'">
+        <br>
+        <br>
+        <input  type="button" value="4" onclick="clasi.display.value+='4'">
+        <input  type="button" value="5" onclick="clasi.display.value+='5'">
+        <input  type="button" value="6" onclick="clasi.display.value+='6'">
+        <input  type="button" value="*" onclick="clasi.display.value+='*'">
+        <br>
+        <br>
+        <input  type="button" value="7" onclick="clasi.display.value+='7'">
+        <input  type="button" value="8" onclick="clasi.display.value+='8'">
+        <input  type="button" value="9" onclick="clasi.display.value+='9'">
+        <input  type="button" value="/" onclick="clasi.display.value+='/'">
+        <br>
+        <br>
+        <input  type="button" value="." onclick="clasi.display.value+='.'">
+        <input  type="button" value="0" onclick="clasi.display.value+='0'">
+        <input  type="button" value="=" onclick="clasi.display.value=eval(clasi.display.value)" class="equal">
+        
+    </form>
+</section>
+
+</body>
+</html>
